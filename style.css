@@ -8,20 +8,16 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
 body {
-    width: 1024px;
     height: 100vh;
 }
 
 /* WRAPPER SECTION */
 
-.wrapper {
+.ciao {
+    width: 1024px;
     margin: auto;
-    border: 1px solid black;
-}
-
-.wrapper.centering {
-    width: 50%
 }
 
 /* CLEARFIX */
@@ -50,16 +46,19 @@ header nav * {
     float: left;
 }
 
-header nav ul {
+header nav > ul {
+    padding: 10px 0;
     list-style: none;
-    display: inline-block;
-    margin-left: 5px;
+    margin-left: 20px;;
 }
+
 
 header nav li {
     display: inline-block;
     text-transform: uppercase;
     color: white;
+    vertical-align: middle;
+    font-size: 10px;
 }
 
 header nav a {
@@ -70,13 +69,15 @@ header nav a {
 }
 
 header nav p {
+    padding: 5px;
     font-size: 10px;
-    padding: 10px;
 }
 
 header nav input[type="button"] {
+    text-transform: uppercase;
     border: none;
     padding: 5px 15px;
+    margin-left: 10px;
     border-radius: 3px;
     background-color: rgb(124, 187, 2);
     color: white;
@@ -110,17 +111,12 @@ header section .col.lft input[type="button"] {
     border-radius: 3px;
     background-color: rgb(124, 187, 2);
     text-transform: uppercase;
-
 }
-/* SECTIONS */
-
-
-
 
 header .grey {
     text-align: center;
     background-color: lightgray;
-    padding: 20px;
+    padding: 30px;
 }
 
 header .grey > * {
