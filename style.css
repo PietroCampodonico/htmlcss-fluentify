@@ -1,3 +1,21 @@
+/*==============
+LYST OF CONTENT
+================
+
+    1. Global styles
+
+    2. Utility Classes
+
+    3. Header
+        3.1 Nav
+        3.2 Section
+        3.3 .grey-bar
+    */
+
+/* ================
+ 1. GLOBAL STYLES
+================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,24 +26,32 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* WRAPPER SECTION */
-.wrapper {
-    padding: 0 30px;
+ul {
+    list-style: none;
+    display: inline-block;
 }
 
-.body-wrapper,
-.wrapper-center {
+li {
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+/*===================="
+    2. UTILITY CLASSES
+====================== */
+
+.wrapper {
     width: 1024px;
     margin: auto;
 }
 
-.wrapper-center {
-    margin: auto;
-    width: 50%;
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
 }
-/* CLEARFIX */
 
-header nav::after, 
 header section:after,
 main .row.top:after,
 main .row.bottom:after,
@@ -35,95 +61,97 @@ footer > .col:after {
     clear: both;
 }
 
-/* HEADER */
-
+/* =============
+    3. HEADER
+=============== */
 
 header {
     background-color: rgb(12, 50, 90);
 }
 
-header nav * {
-    float: left;
-}
+/* 3.1 NAV */
 
-header nav > ul {
-    padding: 10px 0;
-    list-style: none;
-    margin-left: 20px;;
-}
-
-
-header nav li {
-    display: inline-block;
-    text-transform: uppercase;
-    color: white;
-    vertical-align: middle;
-    font-size: 10px;
-}
-
-header nav a {
+header nav a,
+header nav span {
+    color:white;
     text-decoration: none;
-    color: white;
-    font-size: 10px;   
-    padding: 5px;
+    font-size: 0.6rem
 }
 
-header nav p {
-    padding: 5px;
-    font-size: 10px;
+header nav > .col {
+    display: inline-block;
+    vertical-align: middle;
 }
 
-header nav input[type="button"] {
-    text-transform: uppercase;
-    border: none;
-    padding: 5px 15px;
-    margin-left: 10px;
-    border-radius: 3px;
+header nav > .col.lft {
+    width: 20%;
+}
+
+header nav .col.center,
+header nav .col.rght {
+    width: 40%;
+}
+
+header nav .col.rght {
+    text-align: right;
+}
+
+header nav .col.rght .button {
+    padding: 5px 10px;
     background-color: rgb(124, 187, 2);
-    color: white;
-    font-size: 10px;
+    border-radius: 5px;
 }
+
+header nav .col.rght .clicked{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white
+}
+
+/* 3.2 Section */
 
 header section {
+    margin-top: 30px;
     padding: 100px 0;
+    background-image: url(img/background-header.png);
+    background-size: contain;
+    background-position-x: 270px;
+    background-position-y: 10px;
+    background-repeat: no-repeat;
 }
 
-header section > .col {
-    width: 50%;
-    height: 100%;
-    border: 1px solid black;
-    float: left;
-}
-
-header section .col *{
+header section > .col.lft {
+    width: 40%;
     color: white;
 }
 
-header section .col.lft h1 {
-    font-size: 30px;
+header section h1 {
+    font-size: 2rem;
+    padding-bottom: 50px;
 }
 
-header section .col.lft input[type="button"] {
-    border: none;
-    padding: 10px 20px;
-    margin-top: 15px;
-    border-radius: 3px;
+header section span {
+    padding: 15px 15px;
     background-color: rgb(124, 187, 2);
+    border-radius: 5px;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 0.6rem;
+
 }
 
-header .grey {
+/* 3.3 .grey */
+
+header .grey-bar {
     text-align: center;
     background-color: lightgray;
     padding: 30px;
 }
 
-header .grey > * {
-    padding-bottom: 5px; 
+header .grey-bar > * {
+    padding-bottom: 5px;
 }
 
-header  .grey > h5 {
+header  .grey-bar > h5 {
     color: grey;
 }
 
@@ -163,7 +191,7 @@ main .row.top > .col .img-container > img {
     width: 120px;
     object-fit: contain;
 
-}    
+}
 
 main .row.top > .col > hr {
     width: 40px;
@@ -213,5 +241,3 @@ footer > .col > .wrapper > * {
 footer p {
     display: inline-block;
 }
-
-footer
