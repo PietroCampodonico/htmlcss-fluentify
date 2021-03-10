@@ -14,6 +14,8 @@ LYST OF CONTENT
     4. Main
         4.1 Top Row
         4.2 Bottom Row
+
+    5. Footer
     */
 
 /* ================
@@ -48,6 +50,13 @@ h5 {
 a,
 span {
     font-size: 0.6rem;
+    text-decoration: none;
+    color: white;
+}
+
+.button {
+    text-transform: uppercase;
+    border-radius: 5px;
 }
 
 /*===================="
@@ -109,7 +118,6 @@ header nav .col.rght {
 header nav .col.rght .button {
     padding: 5px 10px;
     background-color: rgb(124, 187, 2);
-    border-radius: 5px;
 }
 
 header nav .col.rght .clicked{
@@ -140,11 +148,9 @@ header section h1 {
     padding-bottom: 50px;
 }
 
-header section span {
+header section .button {
     padding: 15px 15px;
     background-color: rgb(124, 187, 2);
-    border-radius: 5px;
-    text-transform: uppercase;
 }
 
 /* 3.3 .grey */
@@ -210,23 +216,62 @@ main .row.bottom > .col.rght {
     padding: 20px 120px 150px 30px;
 }
 
-/* FOOTER */
+/*==============
+    5.FOOTER 
+================*/
 
 footer {
     background-color: lightgray;
+    padding-top: 50px;
 }
 
-footer > .col {
-    width: 50%;
-    height: 100%;
-    border: 1px solid black;
+footer a:not(.button),
+footer span {
+    font-size: 0.83rem;
+    color: grey;
+}
+
+footer .col {
+    width: calc(100% / 2);
+    display: inline-block;
     float: left;
 }
 
-footer > .col > .wrapper > * {
-    padding: 10px 0;
+footer .col > *:not(.select) {
+    padding-right: 10px;
 }
 
-footer p {
-    display: inline-block;
+footer .col.rght {
+    text-align: right;
 }
+
+footer .select {
+    border-bottom: 1px solid grey;
+}
+
+footer .select > a {
+    padding-right: 5px;
+}
+
+footer .select > span {
+    text-align: right;
+}
+
+footer .button {
+    padding: 15px 10px;
+    background-color: grey; 
+    margin-left: 10px;
+}
+
+footer .col.rght.scroll {
+    padding: 20px 50px 0;
+    /* position: fixed; */
+}
+
+footer .button.scroll {
+    display: inline-block;
+    padding: 10px 5px;
+}
+
+
+
