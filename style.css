@@ -10,6 +10,10 @@ LYST OF CONTENT
         3.1 Nav
         3.2 Section
         3.3 .grey-bar
+
+    4. Main
+        4.1 Top Row
+        4.2 Bottom Row
     */
 
 /* ================
@@ -37,6 +41,15 @@ li {
     margin: 0 5px;
 }
 
+h5 {
+    color: grey;
+}
+
+a,
+span {
+    font-size: 0.6rem;
+}
+
 /*===================="
     2. UTILITY CLASSES
 ====================== */
@@ -52,8 +65,6 @@ li {
     clear: both;
 }
 
-header section:after,
-main .row.top:after,
 main .row.bottom:after,
 footer > .col:after {
     content: "";
@@ -75,7 +86,6 @@ header nav a,
 header nav span {
     color:white;
     text-decoration: none;
-    font-size: 0.6rem
 }
 
 header nav > .col {
@@ -135,8 +145,6 @@ header section span {
     background-color: rgb(124, 187, 2);
     border-radius: 5px;
     text-transform: uppercase;
-    font-size: 0.6rem;
-
 }
 
 /* 3.3 .grey */
@@ -151,58 +159,41 @@ header .grey-bar > * {
     padding-bottom: 5px;
 }
 
-header  .grey-bar > h5 {
-    color: grey;
-}
+/*============ 
+    4. MAIN
+==============*/
 
-/* MAIN */
-main .row {
-    height: 350px;
-}
-
-main .row h3,
-main .row h5,
-main .row.bottom > .col.rght a {
-    color: grey;
-}
-
-main .row .col .wrapper * {
-    padding: 15px 0;
-}
+/* 4.1 Top Row */
 
 main .row.top .col {
-    height: 100%;
     width: calc(100% / 3);
     float: left;
-    border: 1px solid black;
     text-align: center;
+    padding: 20px 30px 25px;
 }
 
+main .row > .col > * {
+    padding-bottom: 10px;
+}
 
-
-main .row.top > .col .img-container{
+main .row.top img{
     height: 120px;
     width: 120px;
     object-fit: contain;
+    object-position: center;
 }
 
-main .row.top > .col .img-container > img {
-    height: 120px;
-    width: 120px;
-    object-fit: contain;
-
+main .row.top > .col > span {
+    margin: auto;
+    display: block;
+    width: 50px;
+    border-top: 1px solid grey;
 }
 
-main .row.top > .col > hr {
-    width: 40px;
-    text-align: center;
-}
-
+/* 4.2 Bottom Row */
 
 main .row.bottom .col {
     width: 50%;
-    height: 100%;
-    border: 1px solid black;
     float: left;
 }
 
@@ -211,14 +202,12 @@ main .row.bottom .col.lft {
     background-size: contain;
     background-repeat: no-repeat;
     background-position:center ;
+    padding: 150px;
+    margin: 30px 0;
 }
 
-main .row.bottom > .col.rght > .wrapper > * {
-    padding-right: 80px;
-}
-
-main .row.bottom > .col.rght a {
-    font-size: 12px;
+main .row.bottom > .col.rght {
+    padding: 20px 120px 150px 30px;
 }
 
 /* FOOTER */
